@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Detail Produk | Ruang Tile</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&family=Noto+Serif+SC:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="wadah header-isi">
+    <a href="index.html#beranda" class="logo" aria-label="Ruang Tile, ke beranda">
+      <span class="logo-ubin" aria-hidden="true">福</span>
+      <span data-isi="merek">Ruang Tile</span>
+    </a>
+
+    <button class="menu-tombol" id="menuTombol" aria-label="Buka menu" aria-expanded="false" aria-controls="nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+
+    <nav class="nav" id="nav" aria-label="Menu utama">
+      <a class="tautan" href="index.html#produk">Produk</a>
+      <a class="tautan" href="index.html#keunggulan">Keunggulan</a>
+      <a class="tautan" href="index.html#alur">Cara Pesan</a>
+      <a class="tautan" href="index.html#kontak">Kontak</a>
+      <a class="tombol tombol-merah tombol-kecil" href="index.html#kontak">Hubungi Kami</a>
+    </nav>
+  </div>
+</header>
+
+<div class="judul-halaman">
+  <div class="wadah">
+    <a class="kembali" href="index.html#produk">&larr; Kembali ke katalog</a>
+    <h1>Detail Produk</h1>
+    <p>Spesifikasi dan keunggulan setiap meja mahjong dari Ruang Tile.</p>
+  </div>
+</div>
+
+<main>
+  <div class="wadah" id="detailList"></div>
+</main>
+
+<footer class="footer">
+  <div class="wadah">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html#beranda" class="logo"><span class="logo-ubin" aria-hidden="true">福</span><span data-isi="merek">Ruang Tile</span></a>
+        <p style="margin-top:1rem;max-width:22rem;" data-isi="footer-tentang">Meja mahjong otomatis berkualitas untuk keluarga, kantor, dan klub. Dibuat supaya setiap putaran terasa lebih nyaman.</p>
+      </div>
+      <div>
+        <h4>Menu</h4>
+        <ul>
+          <li><a href="index.html#produk">Produk</a></li>
+          <li><a href="index.html#keunggulan">Keunggulan</a></li>
+          <li><a href="index.html#alur">Cara Pesan</a></li>
+          <li><a href="index.html#kontak">Kontak</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Ikuti kami</h4>
+        <ul>
+          <li><a href="#" data-isi="instagram">Instagram @ruangtile</a></li>
+          <li><a href="#" data-isi="facebook">Facebook Ruang Tile</a></li>
+          <li><a href="#" data-isi="tiktok">TikTok @ruangtile</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bawah">
+      <span>&copy; <span id="tahun"></span> <span data-isi="merek">Ruang Tile</span>. Hak cipta dilindungi.</span>
+      <span>Gong Xi Fa Cai</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="#" data-wa="Halo Ruang Tile, saya ingin bertanya." aria-label="Chat WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 3.5A11.9 11.9 0 0 0 12 0C5.4 0 0 5.4 0 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6A12 12 0 0 0 12 24c6.6 0 12-5.4 12-12 0-3.2-1.2-6.200-3.500-8.500zM12 22a9.900 9.900 0 0 1-5-1.400l-.4-.2-3.700 1 1-3.600-.2-.4A10 10 0 1 1 12 22zm5.500-7.500c-.3-.1-1.800-.9-2-1s-.5-.1-.7.100-.8 1-1 1.200-.4.200-.7.100a8.200 8.200 0 0 1-4-3.500c-.3-.5.300-.5.900-1.600.1-.2 0-.4 0-.5l-.9-2.200c-.2-.6-.5-.5-.7-.5h-.6a1.200 1.200 0 0 0-.9.4 3.800 3.800 0 0 0-1.200 2.800 6.600 6.600 0 0 0 1.400 3.500 15 15 0 0 0 5.800 5.100c2.100.9 2.100.6 2.500.6a2.800 2.800 0 0 0 1.800-1.300 2.200 2.200 0 0 0 .2-1.300c-.1-.1-.3-.2-.6-.3z"/></svg>
+</a>
+
+<script>
+/* =============================================================
+   DATA DETAIL PRODUK — EDIT DI SINI
+   Nama, harga, dan foto sebaiknya sama dengan yang ada di index.html.
+   Bagian "[isi]" adalah contoh, ganti dengan data produk Anda.
+   ============================================================= */
+const MEREK = "Ruang Tile";
+const WHATSAPP = "6281317172425";
+
+const DETAIL = [
+  {
+    nama: "Meja Otomatis Standar", lencana: "Terlaris", foto: "foto/meja-1.jpg", harga: "Rp 8.499.000",
+    ringkas: "Meja mahjong otomatis dengan kaki tengah dan roda di bagian dasar, mudah digeser ke sudut ruang mana pun. Ubin teracak dan tersusun sendiri, jadi permainan bisa langsung dimulai.",
+    fitur: [
+      "Pengacak ubin otomatis untuk 4 pemain",
+      "Kaki tengah dengan roda, mudah dipindahkan",
+      "Permukaan abu-abu yang rapi di ruang keluarga",
+      "Sudah termasuk satu set 144 ubin"
+    ],
+    spesifikasi: [
+      ["Ukuran meja", "[isi] cm"], ["Tinggi", "[isi] cm"], ["Berat", "[isi] kg"],
+      ["Daya", "[isi] W"], ["Jumlah ubin", "144 buah"], ["Garansi", "3 bulan"]
+    ]
+  },
+  {
+    nama: "Meja Portable", lencana: "", foto: "foto/meja-2.jpg", harga: "Rp 6.500.000",
+    ringkas: "Mesin mahjong portabel berbentuk koper dengan pegangan, ringan dibawa untuk berkumpul di rumah, piknik, atau berkemah. Letakkan di atas meja biasa dan ubin tersusun otomatis.",
+    fitur: [
+      "Bentuk koper dengan pegangan, mudah dibawa",
+      "Ubin tersusun otomatis setelah diacak",
+      "Cukup diletakkan di atas meja biasa",
+      "Cocok untuk di rumah, piknik, dan berkemah"
+    ],
+    spesifikasi: [
+      ["Ukuran", "[isi] cm"], ["Berat", "[isi] kg"], ["Daya", "[isi] W"],
+      ["Jumlah ubin", "[isi] buah"], ["Garansi", "3 bulan"]
+    ]
+  }
+];
+
+/* ============ KODE PROGRAM ============ */
+const linkWA = teks => `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(teks)}`;
+
+document.getElementById('detailList').innerHTML = DETAIL.map((p, i) => `
+  <article class="detail" id="produk-${i + 1}">
+    <div class="detail-foto">
+      <img src="${p.foto}" alt="${p.nama}">
+      ${p.lencana ? `<span class="lencana">${p.lencana}</span>` : ''}
+    </div>
+    <div class="detail-info">
+      <h2>${p.nama}</h2>
+      <p class="detail-harga">${p.harga} <small>/ unit</small></p>
+      <p>${p.ringkas}</p>
+      <ul class="fitur">${p.fitur.map(f => `<li>${f}</li>`).join('')}</ul>
+      <table class="spek"><tbody>${p.spesifikasi.map(s => `<tr><th>${s[0]}</th><td>${s[1]}</td></tr>`).join('')}</tbody></table>
+      <div class="detail-aksi">
+        <a class="tombol tombol-merah" href="${linkWA(`Halo ${MEREK}, saya ingin memesan ${p.nama}. Mohon info harga dan ketersediaan.`)}" target="_blank" rel="noopener">Pesan via WhatsApp</a>
+        <a class="tombol tombol-garis-merah" href="index.html#produk">Lihat Produk Lain</a>
+      </div>
+    </div>
+  </article>`).join('');
+
+document.querySelectorAll('[data-wa]').forEach(el => {
+  el.href = linkWA(el.dataset.wa); el.target = '_blank'; el.rel = 'noopener';
+});
+document.getElementById('tahun').textContent = new Date().getFullYear();
+
+const menuTombol = document.getElementById('menuTombol');
+const nav = document.getElementById('nav');
+menuTombol.addEventListener('click', () => {
+  const buka = nav.classList.toggle('buka');
+  menuTombol.setAttribute('aria-expanded', buka);
+});
+</script>
+</body>
+</html>
